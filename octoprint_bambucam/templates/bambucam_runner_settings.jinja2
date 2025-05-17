@@ -1,0 +1,22 @@
+<form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label">Stream URL</label>
+    <div class="controls">
+      <input id="stream-url" type="text" class="input-block-level" readonly>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Snapshot URL</label>
+    <div class="controls">
+      <input id="snapshot-url" type="text" class="input-block-level" readonly>
+    </div>
+  </div>
+</form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const ip = window.location.hostname;
+    document.getElementById("stream-url").value = `http://${ip}:8183/webcam/?action=stream`;
+    document.getElementById("snapshot-url").value = `http://${ip}:8183/webcam/?action=snapshot`;
+  });
+</script>
