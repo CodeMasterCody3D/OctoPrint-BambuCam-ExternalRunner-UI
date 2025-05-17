@@ -10,7 +10,7 @@ class BambuCamRunnerPlugin(octoprint.plugin.StartupPlugin,
 
     def on_after_startup(self):
         def run_script():
-            script_url = "https://raw.githubusercontent.com/CodeMasterCody3D/OctoPrint-BambuPrinter/refs/heads/rc/bambucam.py"
+            script_url = "https://github.com/CodeMasterCody3D/OctoPrint-BambuCam-ExternalRunner-UI/raw/refs/heads/master/bambucam.py"
             script_path = os.path.join(self._basefolder, "bambucam.py")
 
             self._logger.info(f"Downloading bambucam.py from {script_url}")
